@@ -1,0 +1,19 @@
+{
+  "name": "challenge_app",
+  "version": "1.0.0",
+  "description": "Gaia programmer challenge",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Challenge"
+  },
+  "author": "Breighton Dawe",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.2",
+    "express-json": "^1.0.0"
+  }
+}
