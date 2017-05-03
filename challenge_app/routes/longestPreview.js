@@ -1,7 +1,7 @@
 const Client = require('node-rest-client').Client;
 const client = new Client();
 
-exports.find = function (req, res) {
+exports.find = (req, res) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
   console.log("Processing request: " + req.params.tid)
   let args = {
