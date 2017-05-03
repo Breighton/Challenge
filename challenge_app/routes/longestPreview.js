@@ -41,11 +41,10 @@ exports.find = function (req, res) {
               if (typeof title.preview !== 'undefined') {
                 duration = parseInt(title.preview.duration, 10)
                 if (duration > longestDuration) {
-                    titleNid = title.Nid
+                    titleNid = parseInt(title.nid)
                     longestDuration = duration
-                    previewNid = title.preview.nid
+                    previewNid = parseInt(title.preview.nid)
                     content = title.preview.contentId
-                    //console.log("Found new longest: ", longestDuration, content)
                 }
               }
             });

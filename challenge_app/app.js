@@ -1,14 +1,23 @@
 var express = require('express')
+var http = require('http');
+
 var lp= require('./routes/longestPreview')
 var about = require('./routes/about')
 
 var app = express()
 
-app.listen(5000, function () {
-  console.log('Challenge respone started, listening on port 5000!')
-})
+//app.listen(5000, function () {
+//  console.log('Challenge response started, listening on port 5000!')
+//})
 
 app.get('/terms/:tid/longest-preview-media-url', lp.find)
 
 app.get('/about', about.show)
 
+// *** server config *** //
+var server   = http.createServer(app);
+server.listen(5000, function() {
+  console.log('Challenge server started, listening on port 5000!');
+});
+
+module.exports = app;
