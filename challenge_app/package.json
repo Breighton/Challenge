@@ -4,7 +4,7 @@
   "description": "Gaia programmer challenge",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nyc mocha --timeout=4000"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "chai-http": "^3.0.0"
+    "chai-http": "^3.0.0",
+    "nyc": "^10.3.0"
   }
 }
