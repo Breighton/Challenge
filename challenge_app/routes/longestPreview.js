@@ -1,3 +1,6 @@
+const bunyan = require('bunyan');
+const logger = bunyan.createLogger({name: "Challenge"});
+
 const Client = require('node-rest-client').Client;
 const client = new Client();
 
@@ -6,13 +9,13 @@ let res = null;
 exports.find = (req, ires) => {
   res = ires;
   res.setHeader("Access-Control-Allow-Origin", "*");
-  console.log("Processing request: " + req.params.tid);
+  logger.info({message: "Processing request", tid: req.params.tid});
 
   fetchTermList(req.params.tid)
   .then( fetchLongestPreview )
   .then( fetchPreviewUrl )
   .catch((errMsg) => {
-    console.log(errMsg);
+    logger.error({message: errMsg});
     res.status(500).send(errMsg);
   });
 };

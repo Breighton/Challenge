@@ -39,3 +39,9 @@ With the docker app running, you can access the endpoints the same as stated abo
 
 With the app running (either manually or in docker), you can perform sandbox tests on the endpoint
 by running the script test/sandboxTests.sh to insure all is working and seeing some useful stats.
+
+Finally, the app looks to see if the environment variable LOG_REQUESTS is set to true, and if so
+puts out highly detailed information about all incoming requests.  This is typically not needed, but
+I found it very useful in tracking down bogus requests or denial of serverice type of requests, so
+stuck it in there...  I would recommend running without it being defined or false <grin>.
+
