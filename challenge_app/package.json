@@ -4,6 +4,7 @@
   "description": "Gaia programmer challenge",
   "main": "app.js",
   "scripts": {
+    "start": "node app",
     "test": "nyc mocha --timeout=4000"
   },
   "repository": {
