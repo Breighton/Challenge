@@ -3,7 +3,6 @@ const http = require('http');
 
 const lp = require('./routes/longestPreview')
 const about = require('./routes/about')
-const lp2 = require('./routes/testPreview')
 
 const app = express()
 
@@ -12,7 +11,6 @@ const app = express()
 //})
 
 app.get('/terms/:tid/longest-preview-media-url', lp.find)
-
 app.get('/about', about.show)
 
 // *** server config *** //
