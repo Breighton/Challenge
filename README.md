@@ -1,17 +1,17 @@
 # Challenge
-
-The app assumes you have node (Boron/LTS) installed (this challenge was developed and runs on v6.10.2)
-For testing, it also assumes mocha is installed (v3.3.0 used for this development effort)
-
-After cloning into your local os or vm, then moving into the code folder and making sure
-all dependencies are present...
-
+The app assumes you have node (Boron/LTS) installed (this challenge was developed and runs on v6.10.2).
+For testing, it also assumes mocha is installed (v3.3.0 used for this development effort).
+Note, node/Boron is installed as part of the Docker build, but if you wish to run and test manually (i.e. outside Docker),
+they need to be available in the os or vm you clone this repo into…
+  
+After cloning into your local os or vm, move into the code folder and install all dependencies…
+  
   $ cd challenge_app
   
   $ npm install # to insure all dependencies are met
   
-you should be able to run the test suite (moch/chai and with coverage stats from istanbul with:
-  
+you should be able to run the test suite (mocha/chai and with coverage stats from istanbul with:
+    
   $ npm test
 
 and if you wish to run the app manually (outside of Docker), use:
