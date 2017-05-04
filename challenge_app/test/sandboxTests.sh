@@ -40,4 +40,3 @@ cat /dev/null > "$errorlog"
 
 ) | tee sandbox_tests.txt
 echo "Failures: $(count_test_failures)"
-  

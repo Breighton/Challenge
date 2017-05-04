@@ -14,7 +14,7 @@ describe('about', function() {
             res.should.have.status(200);
             res.should.be.json;
             res.body.should.have.property('Version');
-            res.body.Version.should.equal('v0.0.1')
+            res.body.Version.should.equal('v0.0.2')
             done();
           })
     });
