@@ -28,7 +28,7 @@ const fetchTermList = exports.fetchTermList = (initialTid) => {
       headers: { "Accept": "application/json" }
     };
     client.get("http://d6api.gaia.com/vocabulary/1/${tid}", args,
-      termListFetch = (data, response) => {
+      termListFetch = function(data, response) {
         if (response.statusCode != 200){
           let errMsg = "Internal error while attempting to read d6api.gaia.com/vocabulary/1/${tid}, received code: "
              + response.statusCode;
